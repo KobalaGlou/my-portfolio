@@ -7,10 +7,7 @@
     <!-- Primary Meta Tags -->
     <title>Portfolio Louis DENIS</title>
     <meta name="title" content="Portfolio Louis DENIS" />
-    <meta
-      name="description"
-    />
-
+    <meta name="description" content="" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta
@@ -26,7 +23,6 @@
       property="og:image"
       content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
     />
-
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta
@@ -42,7 +38,6 @@
       property="twitter:image"
       content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
     />
-
     <!-- Link -->
     <link
       rel="apple-touch-icon"
@@ -97,9 +92,10 @@
           </h1>
           <!-- Navbar links -->
           <ul class="nav-menu">
+            <li><a class="nav-link" href="#experience">PARCOURS PROFESSIONNEL</a></li>
             <li><a class="nav-link" href="#projects">PROJETS</a></li>
             <li><a class="nav-link" href="#contact">CONTACT</a></li>
-            <li><a class="nav-link" href="#">A PROPOS DE MOIS</a></li>
+            <li><a class="nav-link" href="#about">A PROPOS DE MOI</a></li>
             <li>
               <a
                 class="nav-link btn btn-primary"
@@ -107,7 +103,6 @@
                 >MON GITHUB <i class="fas fa-arrow-right"></i
               ></a>
             </li>
-
             <!-- Toggle switch -->
             <div class="theme-switch">
               <input type="checkbox" id="switch" />
@@ -125,42 +120,59 @@
           </div>
         </div>
       </nav>
-
       <section class="header-container">
-        <img
-          class="profile-image"
-          src="assets/profile-image.svg"
-          alt=""
-        />
+        <img src="assets/photo_didentite.jpg" alt="Photo d'identité" width="140" height="210" />
         <h1>Salut moi c'est Louis</h1>
-
         <div class="content-text">
-          <h2>Developpeur web et applications lourdes</h2>
-          <h1>sites,applications,solutions techniques et informatiques</h1>
-
+          <h2>Développeur web et applications lourdes</h2>
+          <h1>sites, applications, solutions techniques et informatiques</h1>
           <p>
             Je suis un développeur principalement web et application bureau.
-            J'ai travaillé sur de gros projets 
+            J'ai travaillé sur de gros projets
           </p>
         </div>
-        <a
-          href="https://github.com/KobalaGlou"
-          class="btn btn-secondary"
-          target="_blank"
-          >Allez voir mon GitHub</a
-        >
+        <a href="https://github.com/KobalaGlou" class="btn btn-secondary" target="_blank">Allez voir mon GitHub</a>
       </section>
     </header>
+
+    <!-- Professional Experience -->
+<section id="experience" class="experience-container container">
+  <div class="division"></div>
+  <div class="content-text">
+    <h2>Expériences professionnelles</h2>
+
+    <!-- Experience 1 -->
+    <div class="experience-card">
+      <img src="assets/assurance maladie.png" alt="Experience 1" class="experience-img left" />
+      <div class="experience-info right">
+        <h3>Développeur stagiaire à la CNAM sur Angers </h3>
+        <p><strong>Période :</strong>Mai-Juin 2023</p>
+        <p><strong>Technologies :</strong> Python,SQLite </p>
+        <p>J'ai travaillé sur une solution nommé SINC Assemblage pour du traitement de flux de données de transfert avec python pour simplifier l'analyse des données par les consultants</p>
+      </div>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="experience-card">
+      <div class="experience-info left">
+        <h3>Développeur Web Middleware à la CNAM sur Angers</h3>
+        <p><strong>Période :</strong> Janvier-Mars 2024</p>
+        <p><strong>Technologies :</strong> PHP (Laravel), Tailwind, AngularJS, TypeScript</p>
+        <p>J'ai repris mon projet de l'année précédente pour ajouter une interface graphique avec une solutions Web en modifiant mon projet pour en faire une API à l'aide du Framework Django et un site Web avec AngularJS</p>
+      </div>
+      <img src="assets/project/logo_sinc.png" alt="Experience 2" class="experience-img right" />
+    </div>
+
+</section>
+
 
     <!-- Projects -->
     <section id="projects" class="project-container container">
       <div class="division"></div>
       <div class="content-text">
         <h2>Projets</h2>
-
-        <p>Voici quelques-uns de mes projets</p>
+        <h1>Voici quelques-uns de mes projets</h1>
       </div>
-
       <article class="project">
         <!-- Project 1 -->
         <div href="" class="card">
@@ -169,14 +181,12 @@
               <h3>Project Link Up</h3>
               <p>PHP Laravel, Tailwind</p>
             </div>
-
             <div class="project-link">
               <a href="https://github.com/KobalaGlou/LinkUp-Web" target="_blank"><i class="fab fa-github"></i></a>
               <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
             </div>
           </div>
         </div>
-
         <!-- Project 2 -->
         <div href="" class="card">
           <div class="project-info">
@@ -184,36 +194,54 @@
               <h3>Project SINC Web Assemblage</h3>
               <p>Python Django, AngularJS, TypeScript</p>
             </div>
-
             <div class="project-link">
               <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
             </div>
           </div>
         </div>
-
-        <!-- Porject 3 -->
+        <!-- Project 3 -->
         <div href="" class="card">
           <div class="project-info">
             <div class="project-bio">
               <h3>Project Book Nook Media</h3>
               <p>C#, Pomelo</p>
             </div>
-
             <div class="project-link">
               <a href="https://github.com/Aurelien-Louis/C" target="_blank"><i class="fab fa-github"></i></a>
               <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
             </div>
           </div>
         </div>
+      </article>
+    </section>
 
-        
-
+    <!-- About Me -->
+    <section id="about" class="about-container container">
+      <div class="division"></div>
+      <div class="content-text">
+        <h2>À propos de moi</h2>
+        <p>
+          Passionné par le développement web et les applications lourdes, je maîtrise un large panel de technologies incluant C#, PHP avec Laravel et Tailwind, SQL, Python avec Django, HTML, CSS, JavaScript, ainsi qu'AngularJS avec TypeScript.
+        </p>
+        <p>
+          Mon parcours m'a permis de travailler sur divers projets, des plus petits aux plus grands, toujours avec le même objectif : fournir des solutions de haute qualité, performantes et adaptées aux besoins des utilisateurs. Mon expérience en développement back-end et front-end me permet d'avoir une vision globale des projets et d'assurer une intégration fluide entre les différentes technologies.
+        </p>
+        <p>
+          Je suis particulièrement à l'aise en travail de groupe, où j'aime collaborer et partager mes connaissances avec mes collègues. Les gros projets ne me font pas peur, bien au contraire, ils représentent pour moi un défi motivant et une occasion de repousser mes limites.
+        </p>
+        <p>
+          Mes atouts incluent ma capacité à résoudre des problèmes de manière créative, à m'adapter rapidement aux nouvelles technologies et à maintenir une attitude positive même face aux défis les plus complexes. Mon engagement envers la qualité et mon souci du détail se reflètent dans chaque ligne de code que je produis.
+        </p>
+        <p>
+          Je suis constamment en quête de nouvelles opportunités pour élargir mes compétences et relever de nouveaux défis. Si vous recherchez un développeur web passionné, compétent et déterminé à produire des résultats exceptionnels, je suis convaincu que je suis le candidat idéal pour votre projet.
+        </p>
+      </div>
     </section>
 
     <footer id="footer">
-      <div class="container">
-        <a >Mail : louis.denis49@gmail.com</a>
-        <a >Tél : 07 72 21 04 73</a>
+      <div id="contact" class="container">
+        <a>Mail : louis.denis49@gmail.com</a>
+        <a>Tél : 07 72 21 04 73</a>
         <!-- Social links -->
         <div class="social">
           <a href="#" target="_blank"
@@ -229,7 +257,8 @@
           /></a>
         </div>
         <!-- Attribution -->
-        <div class="attribution">
+        <div class="attribution"></div>
+      </div>
     </footer>
     <script src="js/script.js"></script>
   </body>

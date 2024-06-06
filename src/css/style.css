@@ -156,6 +156,40 @@ body {
   }
 }
 
+.experience-container {
+  padding: 20px;
+}
+.experience-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.experience-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.experience-info {
+  flex: 1;
+  padding: 0 20px;
+}
+.experience-card .left {
+  order: 1;
+}
+.experience-card .right {
+  order: 2;
+}
+.experience-card:nth-child(even) .experience-img {
+  order: 2;
+}
+.experience-card:nth-child(even) .experience-info {
+  order: 1;
+}
+
 .division {
   width: 100%;
   height: 2px;
