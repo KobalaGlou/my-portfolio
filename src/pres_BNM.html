@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Nook Media - Application de Gestion de Médiathèque</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 id="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" alt="Your Logo">
+                    </a>
+                </h1>
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li><a class="nav-link" href="#features">Fonctionnalités</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Présentation de Book Nook Media</h1>
+            <p>Application de gestion de médiathèque développée en C# .NET et utilisant l'ORM Pomelo.</p>
+        </div>
+    </section>
+
+    <section id="intro" class="container">
+        <h2>Introduction</h2>
+        <p>
+            Ce projet a été créé pour des clients, gérants d’une médiathèque. Ils désiraient apporter des évolutions à leur application et leur site web déjà existants. Nous devions donc apporter des modifications sur leur code. Je me suis occupé de la partie application en C# .NET et l’ORM Pomelo pour faire ces modifications.
+        </p>
+    </section>
+
+    <section id="schema" class="container">
+        <h2>Schéma de la Base de Données</h2>
+        <img src="assets/schema_bdd.png" alt="Schéma de la BDD" class="schema-img">
+        <p>
+            La base de données finale a donc été modifiée jusqu’à obtenir ce résultat: <br>
+            Un emprunteur possède un nom, un prénom, une date de naissance, un email et un numéro de portable. On peut également savoir si le compte a été validé et le token de validation. <br>
+            Un emprunt se caractérise par l’identifiant de son emprunteur, de la ressource empruntée et de l’exemplaire ainsi que de la date de l’emprunt, ce à quoi on ajoute également la durée de l’emprunt et une variable prolongement pour indiquer si l’on veut allonger la durée du prêt. <br>
+            Un exemplaire est caractérisé par l’identifiant de sa ressource ainsi que son propre identifiant, et possède un état et une date de création. <br>
+            Un commentaire s’identifie par son identifiant propre, celui de son emprunteur et de la ressource, avec un contenu et une date de publication. <br>
+            Une ressource possède un identifiant, une catégorie et 0 ou un auteur. Elle a un titre, une description, une image de présentation, une année de sortie, une ou plusieurs langues, un ISBN et parfois un lien vers la ressource en ligne. <br>
+            Un auteur possède uniquement un nom et un prénom. <br>
+        </p>
+    </section>
+
+    <section id="features" class="container">
+        <h2>Fonctionnalités</h2>
+        
+        <div class="feature">
+            <h3>Page de Connexion</h3>
+            <p>
+                Une page de connexion a été ajoutée pour sécuriser l’accès à l’application par un login et mot de passe hashé avec Bcrypt.
+            </p>
+            <img src="assets/pres_booknook/login.png" alt="Page de Connexion" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Menu Principal</h3>
+            <p>
+                Une page de menu permet d’accéder aux différentes fonctionnalités de l’application:
+                <ul>
+                    <li>Gestion des ressources et leurs exemplaires</li>
+                    <li>Gestion des emprunteurs</li>
+                    <li>Gestion des catégories</li>
+                    <li>Gestion des demandes de prolongement de prêt</li>
+                </ul>
+            </p>
+            <img src="assets/pres_booknook/accueil.png" alt="Menu Principal" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Gestion des Ressources</h3>
+            <p>
+                La partie de gestion des ressources est divisée en 3 menus :
+                <ul>
+                    <li>La liste complète et les informations des ressources</li>
+                    <li>L’ajout d’une ressource</li>
+                    <li>La modification des informations d’une ressource</li>
+                </ul>
+            </p>
+            <img src="assets/pres_booknook/ressources.png" alt="Gestion des Ressources" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Gestion des Emprunteurs</h3>
+            <p>
+                Le second menu permet de visualiser les informations des emprunteurs, de voir les emprunts de chacun et de supprimer un emprunteur de la base de données avec un message de confirmation.
+            </p>
+            <img src="assets/pres_booknook/emprunteurs.png" alt="Gestion des Emprunteurs" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Gestion des Catégories</h3>
+            <p>
+                Le menu des catégories permet à l’utilisateur d’ajouter une catégorie, de la modifier ou de la supprimer. La suppression est impossible s’il reste des ressources présentes dans cette catégorie.
+            </p>
+            <img src="assets/pres_booknook/catégories.png" alt="Gestion des Catégories" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Gestion des Prolongements de Prêt</h3>
+            <p>
+                Un dernier menu permet à l’utilisateur de gérer les demandes des emprunteurs pour le prolongement de prêt. La page affiche les demandes avec des boutons pour valider ou refuser la demande. En cas de refus, l’utilisateur doit entrer une raison qui s’affichera sur l’interface web de l’utilisateur en question lors de sa prochaine connexion.
+            </p>
+            <img src="assets/pres_booknook/prolongements.png" alt="Gestion des Prolongements de Prêt" class="feature-img">
+        </div>
+    </section>
+
+    <section id="conclusion" class="container">
+        <h2>Conclusion</h2>
+        <p>
+            L’application répond à toutes les fonctionnalités demandées dans le cahier des charges mais plusieurs évolutions sont possibles comme la gestion des auteurs (ajout, modification), la visualisation des emprunts sur un calendrier ou encore une amélioration côté graphique pour un meilleur confort visuel pour l’utilisateur.
+        </p>
+    </section>
+
+    <footer id="footer" class="container">
+        <p>Contactez-nous : <a href="mailto:louis.denis49@gmail.com">louis.denis49@gmail.com</a> | Tél : 07 72 21 04 73</p>
+    </footer>
+</body>
+</html>

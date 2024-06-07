@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Up - Réseau Social pour le Lycée Polyvalent Chevrollier</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 id="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" alt="Your Logo">
+                    </a>
+                </h1>
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li><a class="nav-link" href="#features">Fonctionnalités</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Présentation de Link Up</h1>
+            <p>Réseau social développé pour le Lycée Polyvalent Chevrollier, permettant la gestion des annonces et des événements.</p>
+        </div>
+    </section>
+
+    <section id="intro" class="container">
+        <h2>Introduction</h2>
+        <p>
+            Notre entreprise fictive Desoxia a créé et mis en production 3 solutions applicatives pour répondre à un besoin exprimé en tant que réseau social pour le Lycée Polyvalent Chevrollier. Pour ce faire, nous avons développé 3 solutions : un site web, une application lourde et une application mobile. Nous avions un cahier des charges à respecter mettant en avant des obligations sur la structure, les fonctionnalités et les tâches à accomplir en priorité.
+        </p>
+    </section>
+
+    <section id="schema" class="container">
+        <h2>Schéma de la Base de Données</h2>
+        <img src="assets/pres_linkup/bdd.png" alt="Schéma de la BDD" class="schema-img">
+        <p>
+            Nous avons également mis en place des déclencheurs pour sécuriser au mieux les données et leur intégrité au sein de la base. Voici les déclencheurs :
+        </p>
+        <ul>
+            <li><strong>Trigger 1 :</strong> Vérifie si la date d’une annonce est bien après la date de création de l’annonce elle-même (par souci de cohérence).</li>
+            <li><strong>Trigger 2 :</strong> Vérifie lors d’un signalement que l’utilisateur ne se signale pas lui-même (par souci de logique).</li>
+            <li><strong>Trigger 3 :</strong> Vérifie qu’un étudiant ne peut pas être « intéressé » par sa propre annonce (par souci de logique).</li>
+            <li><strong>Trigger 4 :</strong> Vérifie si un signalement fait bien référence soit à un utilisateur soit à une annonce (par souci d’utilité).</li>
+        </ul>
+    </section>
+
+    <section id="features" class="container">
+        <h2>Fonctionnalités</h2>
+        
+        <div class="feature">
+            <h3>Page de Connexion</h3>
+            <p>
+                Avant de pouvoir accéder au site et à ses fonctionnalités, il faut se connecter via l’interface de connexion. Lors de la première connexion, un message s’affiche indiquant à la personne qu’elle a reçu un mail lui permettant de changer son mot de passe.
+            </p>
+            <img src="assets/pres_linkup/login.png" alt="Page de Connexion" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Page d'Accueil</h3>
+            <p>
+                Après connexion, la page d’accueil affiche les menus dans le header, le nombre de crédits possédés, et le profil utilisateur. Un bandeau permet de filtrer les annonces par titre, type d’événement, type d’annonce, et places disponibles. Les annonces sont affichées avec leur titre, type d’événement, date de l’événement, et nombre de places.
+            </p>
+            <img src="assets/pres_linkup/accueil.png" alt="Page d'Accueil" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Vue Détail d'une Annonce</h3>
+            <p>
+                En cliquant sur une annonce, une nouvelle page s'ouvre avec toutes les informations utiles, une carte interactive pour le lieu, et deux boutons : participer et signaler.
+            </p>
+            <img src="assets/pres_linkup/detailA.png" alt="Vue Détail d'une Annonce" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Ajout d'une Annonce</h3>
+            <p>
+                Cliquer sur "Ajouter une annonce" ouvre un formulaire pour choisir l'événement et renseigner les détails spécifiques à chaque type d'événement. Chaque type d’événement (sport, cinéma, covoiturage, loisir, compétences, lecture) a son propre formulaire.
+            </p>
+            <img src="assets/pres_linkup/ajoutA.png" alt="Ajout d'une Annonce" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Mes Annonces et Inscriptions</h3>
+            <p>
+                La section "Mes annonces" affiche toutes les annonces de l'utilisateur avec des boutons pour les modifier ou supprimer. La section "Mes inscriptions" montre toutes les annonces auxquelles l'utilisateur est inscrit, avec des options pour voir les détails, se désinscrire, ou signaler.
+            </p>
+            <img src="assets/pres_linkup/mesannonces.png" alt="Mes Annonces" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Modération</h3>
+            <p>
+                Accessible uniquement aux modérateurs, cette section montre toutes les annonces, y compris celles cachées aux utilisateurs. Les modérateurs peuvent signaler ou cacher des annonces, et signaler des utilisateurs.
+            </p>
+            <img src="assets/pres_linkup/moderation.png" alt="Modération" class="feature-img">
+        </div>
+
+        <div class="feature">
+            <h3>Gestion du Profil</h3>
+            <p>
+                Les utilisateurs peuvent modifier leurs informations personnelles et leur mot de passe via la page profil. Des vérifications sont effectuées pour s'assurer que le mot de passe actuel est correct et que le nouveau mot de passe est confirmé correctement.
+            </p>
+            <img src="assets/pres_linkup/profil.png" alt="Gestion du Profil" class="feature-img">
+        </div>
+    </section>
+
+    <section id="conclusion" class="container">
+        <h2>Conclusion</h2>
+        <p>
+            Ce projet est bien abouti même s’il manque quelques fonctionnalités comme le chat en temps réel ou le système de paiement pour les annonces nécessitant finance. Ces deux fonctionnalités peuvent être de potentielles évolutions futures. Nous sommes cependant satisfaits du résultat final.
+        </p>
+    </section>
+
+    <footer id="footer" class="container">
+        <p>Contactez-nous : <a href="mailto:louis.denis49@gmail.com">louis.denis49@gmail.com</a> | Tél : 07 72 21 04 73</p>
+    </footer>
+</body>
+</html>
